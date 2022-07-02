@@ -1,0 +1,342 @@
+* {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  width: 90px;
+  height: 40px;
+  border: none;
+  background-color: #5385c1;
+  font-style: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+header {
+  width: 100%;
+  height: 65vh;
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-top: 10px solid #5385c1;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3.5rem;
+}
+header nav a {
+  text-decoration: none;
+  color: #fff;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header nav ul li {
+  list-style: none;
+  color: #fff;
+  padding-left: 1rem;
+}
+header nav .nav {
+  display: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+header .banner {
+  text-align: center;
+  margin-top: 8rem;
+}
+header .banner h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  color: #fff;
+}
+header .banner p {
+  color: #dfdfdf;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.info section {
+  width: 33%;
+  padding: 0 2rem;
+}
+.info section h3 {
+  font-size: 1.8rem;
+  color: #5385c1;
+  font-weight: 300;
+}
+.info section p {
+  color: gray;
+  line-height: 1.4rem;
+  margin: 2rem 0;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+}
+.info hr {
+  border: 0;
+  width: 0.5px;
+  background-color: rgba(128, 128, 128, 0.527);
+}
+
+.team {
+  width: 100%;
+  background-color: #5385c1;
+  padding: 7rem 0;
+}
+.team .text {
+  text-align: center;
+}
+.team .text h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 200;
+}
+.team .text p {
+  margin-top: 1rem;
+  color: #dfdfdf;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+.team .person {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.team .person section {
+  border: 1px solid #dfdfdf;
+  text-align: center;
+  width: 22%;
+  margin-top: 4.5rem;
+  padding: 3rem 0;
+}
+.team .person section img {
+  border-radius: 100%;
+  width: 80%;
+}
+.team .person section h3 {
+  color: #fff;
+  font-weight: 200;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.team .person section p {
+  color: #dfdfdf;
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.nunc {
+  padding: 4.5rem 0;
+}
+.nunc .text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.nunc .text h1 {
+  font-size: 3rem;
+  font-weight: 200;
+  color: #5385c1;
+}
+.nunc .text p {
+  color: gray;
+  margin-top: 1rem;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.nunc .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nunc .images .left {
+  width: 47.5%;
+}
+.nunc .images .left img {
+  width: 100%;
+}
+.nunc .images .left h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #5385c1;
+  margin: 2rem 0;
+}
+.nunc .images .left p {
+  line-height: 1.5rem;
+  color: gray;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  word-spacing: 0.2rem;
+}
+
+footer .space {
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .space .text p {
+  color: gray;
+}
+footer .space span {
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  color: #5385c1;
+}
+
+@media only screen and (max-width: 700px) {
+  header nav ul {
+    position: absolute;
+    top: 7rem;
+    display: none;
+    margin-left: 2rem;
+  }
+  header nav ul li {
+    float: left;
+  }
+  header nav .nav {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .inner {
+    max-width: 1100px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .inner {
+    max-width: 1000px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .inner {
+    max-width: 900px;
+  }
+}
+@media only screen and (max-width: 965px) {
+  .inner {
+    max-width: 800px;
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  header .banner {
+    margin-top: 9rem;
+  }
+
+  .team .person {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-evenly;
+  }
+  .team .person section {
+    width: 40%;
+  }
+  .team .person section img {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 814px) {
+  header nav a {
+    margin-left: 3rem;
+  }
+  header nav ul {
+    margin-right: 3rem;
+  }
+  header nav .nav {
+    margin-right: 3rem;
+  }
+  header .banner {
+    margin-top: 7rem;
+  }
+  header .banner h1 {
+    font-size: 3.5rem;
+    margin-top: 11rem;
+  }
+  header .banner p {
+    font-size: 0.9rem;
+  }
+
+  .info {
+    margin-bottom: 1rem;
+  }
+  .info section {
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 0 4rem;
+  }
+
+  .nunc {
+    padding-bottom: 1.5rem;
+  }
+  .nunc .images {
+    padding: 0 4rem;
+  }
+  .nunc .images .left {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  footer {
+    padding: 0 4rem;
+  }
+}
+@media only screen and (max-width: 599px) {
+  header .banner h1 {
+    font-size: 3rem;
+  }
+
+  footer .space .text p {
+    font-size: 0.8rem;
+  }
+  footer .space span {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+@media only screen and (max-width: 499px) {
+  html {
+    font-size: 12px;
+  }
+
+  .team .person section {
+    width: 80%;
+  }
+  .team .person section img {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  footer .space .text {
+    width: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */

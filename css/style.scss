@@ -1,0 +1,478 @@
+// Variables
+
+$primaryfont: 'Raleway', sans-serif;
+$basiccol: #5385c1;
+
+*{
+    font-family: $primaryfont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+@mixin flex-property{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+}
+
+.inner{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button{
+    width: 90px;
+    height: 40px;
+    border: none;
+    background-color: $basiccol;
+    font-style: $primaryfont;
+    color: #fff;
+    font-size: 1rem;
+}
+
+// Header starts
+
+header{
+    width: 100%;
+    height: 65vh;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-top: 10px solid $basiccol;
+
+    nav{
+        @include flex-property();
+        margin-top: 3.5rem;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        ul{
+            @include flex-property();
+
+            li{
+                list-style: none;
+                color: #fff;
+                padding-left: 1rem;
+            }
+        }
+
+        .nav{
+            display: none;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+    }
+
+    .banner{
+        text-align: center;
+        margin-top: 8rem;
+
+        h1{
+            font-size: 4rem;
+            font-weight: 100;
+            color: #fff;
+        }
+
+        p{
+            color: #dfdfdf;
+            font-weight: 200;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    }
+}
+
+// Header ends
+
+// Info starts
+
+.info{
+    @include flex-property();
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    section{
+        width: 33%;
+        padding: 0 2rem;
+
+        h3{
+            font-size: 1.8rem;
+            color: $basiccol;
+            font-weight: 300;
+        }
+
+        p{
+            color: gray;
+            line-height: 1.4rem;
+            margin: 2rem 0;
+            letter-spacing: 0.1rem;
+            font-weight: 300;
+        }
+        
+    }
+
+    hr{
+        border: 0;
+        width: 0.5px;
+        background-color: rgba(128, 128, 128, 0.527);
+    }    
+}
+
+// Info ends
+
+// Team starts
+
+.team{
+    width: 100%;
+    background-color: $basiccol;
+    padding: 7rem 0;
+
+    .text{
+        text-align: center;
+
+        h1{
+            font-size: 3.5rem;
+            color: #fff;
+            font-weight: 200;
+        }
+
+        p{
+            margin-top: 1rem;
+            color: #dfdfdf;
+            font-size: 1.2rem;
+            font-weight:  200;
+        }
+    }
+
+    .person{
+        @include flex-property();
+
+        section{
+            border: 1px solid #dfdfdf;
+            text-align: center;
+            width: 22%;
+            margin-top: 4.5rem;
+            padding: 3rem 0;
+
+            img{
+                border-radius: 100%;   
+                width: 80%;             
+            }
+
+            h3{
+                color: #fff;
+                font-weight: 200;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+            }
+
+            p{
+                color: #dfdfdf;
+                font-size: 1.1rem;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+// Team ends
+
+// Nunc starts
+
+.nunc{
+    padding: 4.5rem 0;
+
+    .text{
+        text-align: center;
+        margin-bottom: 3rem;
+
+        h1{
+            font-size: 3rem;
+            font-weight: 200;
+            color: #5385c1;
+        }
+
+        p{
+            color: gray;
+            margin-top: 1rem;
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
+    }
+
+    .images{
+        @include flex-property();
+
+        .left{
+            width: 47.5%;
+
+            img{
+                width: 100%;
+            }
+
+            h3{
+                font-size: 1.6rem;
+                font-weight: 300;
+                color: $basiccol;
+                margin: 2rem 0;
+            }
+
+            p{
+                line-height: 1.5rem;
+                color: gray;
+                letter-spacing: 0.1rem;
+                margin-bottom: 2rem;
+                font-weight: 300;
+                word-spacing: 0.2rem;
+            }
+        }
+    }
+}
+
+// Nunc ends
+
+// Footer starts
+
+footer{
+    
+    .space{
+        padding: 3rem 0;
+        @include flex-property();
+
+        .text{
+            p{
+                color: gray;
+            }
+        }
+
+        span{
+            padding-left: 1rem;
+            font-size: 1.3rem;
+            color: $basiccol;
+        }
+    }
+}
+
+// Media Query starts
+
+@media only screen and (max-width:700px){
+
+    header{
+
+        nav{
+
+            ul{
+                position: absolute;
+                top: 7rem;
+                display: none;
+                margin-left: 2rem;
+
+                li{
+                    float: left;
+                }
+            }
+
+            .nav{
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1200px){
+
+    .inner{
+        max-width: 1100px;
+        
+    }
+
+}
+
+@media only screen and (max-width:1120px){
+
+    .inner{
+        max-width: 1000px;
+        
+    }
+
+}
+
+@media only screen and (max-width:1000px){
+
+    .inner{
+        max-width: 900px;
+    }
+
+}
+
+@media only screen and (max-width:965px){
+
+    .inner{
+        max-width: 800px;
+    }
+
+    html{
+        font-size: 13px;
+    }
+
+    header{
+
+        .banner{
+            margin-top: 9rem;
+        }
+    }
+
+    .team{
+
+        .person{
+            @include flex-property();
+            justify-content: space-evenly;
+
+            section{
+                width: 40%;
+
+                img{
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:814px){
+
+    header{
+
+        nav{
+
+            a{
+                margin-left: 3rem;
+            }
+
+            ul{
+                margin-right: 3rem;
+            }
+
+            .nav{
+                margin-right: 3rem;
+            }
+        }
+
+        .banner{
+
+            margin-top: 7rem;
+
+            h1{
+                font-size: 3.5rem;
+                margin-top: 11rem;
+            }
+
+            p{
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .info{
+        margin-bottom: 1rem;
+
+        section{
+            width: 100%;
+            margin-bottom: 3rem;
+            padding: 0 4rem;
+        }
+    }
+
+    .nunc{
+        padding-bottom: 1.5rem;
+
+        .images{
+
+            padding: 0 4rem;
+
+            .left{
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    footer{
+        padding: 0 4rem;
+    }
+
+}
+
+@media only screen and (max-width:599px){
+
+    header{
+
+        .banner{
+
+            h1{
+                font-size: 3rem;
+            }
+        }        
+
+    }
+
+    footer{
+
+        .space{
+
+            .text{
+
+                p{
+                    font-size: 0.8rem;
+                }
+            }
+    
+            span{
+                font-size: 1rem;
+                padding-left: 0.5rem;
+            }
+        }
+        
+    }
+
+}
+
+@media only screen and (max-width:499px){
+
+    html{
+        font-size: 12px;
+    }
+
+    .team{
+
+        .person{
+
+            section{
+                width: 80%;
+
+                img{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:420px){
+
+    footer .space .text{
+        width: 50%;
+    }
+    
+}
